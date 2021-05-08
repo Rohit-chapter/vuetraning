@@ -56,6 +56,9 @@
       </div>      
       <!--Login-->
       <div class="tab" :class="{ active: isActive}">
+        <div class="mt-5 alert alert-warning text-center" role="alert">
+        We upgraded our system. If you face problems logging in, please  <a href="https://vizzual.io/forgotpassword" class="text-decoration-underline">reset your password</a>.
+        </div>
         <form 
           @submit="loginValidate"
           autocomplete="off"
@@ -129,7 +132,7 @@ export default {
       loginFormSchema
       .validate(this.values, { abortEarly: false })
       .then(
-        
+        alert('success')
       )
       .catch(err => {
         err.inner.forEach(error => {
