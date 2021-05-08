@@ -132,7 +132,7 @@ export default {
       loginFormSchema
       .validate(this.values, { abortEarly: false })
       .then(
-        alert('success')
+        
       )
       .catch(err => {
         err.inner.forEach(error => {
